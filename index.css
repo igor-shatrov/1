@@ -1,0 +1,50 @@
+    * header {
+        height: 100vh;
+        width: 100%;
+        background-image: url(/img/89d1f0306dd951f6b7a7.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    header h1 {
+        color: white;
+    }
+    
+    .header-bottom {
+        position: absolute;
+        bottom: 40px;
+    }
+    
+    .header-bottom span {
+        color: white;
+        margin-left: 50vw;
+        margin-right: 50vw;
+        cursor: pointer;
+    }
+    
+    .block-1 h2 {
+        color: #ffb62e;
+    }
+    
+    .block-2 {
+        background-image: url(/img/Mercedes-benz-III.jpg);
+    }
+    
+    .block-4 {
+        background-image: url(/img/regnum_picture_15555.jpg);
+    }
+    
+    .image-block {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 70vh;
+        width: 100%;
+    }
+    
+    .container {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
