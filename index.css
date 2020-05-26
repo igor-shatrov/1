@@ -6,24 +6,46 @@
         background-size: cover;
         background-position: center;
     }
+
+    *{
+        font-family: 'Roboto Slab', serif;
+    }
     
     header h1 {
         color: white;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .brand-logo h5{
+       margin-left: 10px;
     }
     
     .header-bottom {
         position: absolute;
         bottom: 40px;
+        animation: 0.7s linear 0s infinite alternate up_down;
+        
     }
+    @keyframes up_down { from { margin-bottom:-0.7%; } to { margin-bottom:0.7%; }  }
     
     .header-bottom span {
         color: white;
-        margin-left: 50vw;
-        margin-right: 50vw;
+        margin-left: 48vw;
         cursor: pointer;
     }
     
     .block-1 h2 {
+        color: #ffb62e;
+    }
+
+    .block-3 h2 {
+        color: #ffb62e;
+    }
+
+    .block-5 h2 {
         color: #ffb62e;
     }
     
@@ -45,6 +67,29 @@
     }
     
     .container {
-        padding-top: 150px;
-        padding-bottom: 150px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .footer-copyright{
+        margin: 0;
+    }
+
+    .page-footer input{
+        color: white;
+    }
+
+    .select-dropdown li>span{
+        color: black;
+    }
+    .select-wrapper input.select-dropdown:focus{
+        border-bottom: 1px solid #ffb62e;
+    }
+    input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]){
+        border-bottom: 1px solid #ffb62e;
+    -webkit-box-shadow: 0 1px 0 0 #ffb62e;
+    box-shadow: 0 1px 0 0 #ffb62e;
+    }
+    input[type=text]:not(.browser-default):focus:not([readonly])+label{
+        color: #ffb62e;
     }

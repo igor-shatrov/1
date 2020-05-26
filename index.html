@@ -5,26 +5,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="/index.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto+Slab:wght@400;600;900&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пассажирские перевозки</title>
+    <title>ИП Жилинский</title>
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="nav-wrapper grey darken-4">
-                <a href="tel:+375 29 786 77 82" class="brand-logo">+375(29) 786 77 82</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Наши услуги</a></li>
-                    <li><a href="badges.html">О компании</a></li>
-                    <li><a href="collapsible.html">Наши автомобили</a></li>
-                    <li><a href="collapsible.html">Контакты</a></li>
+        <nav class="grey darken-4 ">
+            <div class="nav-wrapper">
+                <a href="tel:+375 29 786 77 82" class="brand-logo">
+                    <h5>+375(29)786 77 82</h5>
+                </a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="blk-1-href">Наши услуги</a></li>
+                    <li><a class="blk-3-href">О компании</a></li>
+                    <li><a class="blk-5-href">Наши автомобили</a></li>
+                    <li><a class="footer-href">Контакты</a></li>
                 </ul>
+                <ul id="slide-out" class="sidenav">
+                    <li><a class="blk-1-href">Наши услуги</a></li>
+                    <li><a class="blk-3-href">О компании</a></li>
+                    <li><a class="blk-5-href">Наши автомобили</a></li>
+                    <li><a class="footer-href">Контакты</a></li>
+                </ul>
+
             </div>
+
         </nav>
         <div class="valign-wrapper">
-            <h1>Пассажирские перевозки Гродно</h1>
+            <h1 class="">Пассажирские перевозки Гродно</h1>
         </div>
         <div class="header-bottom">
             <span class="blk-1-href"><i class="medium material-icons">keyboard_arrow_down</i></span>
@@ -34,32 +48,45 @@
     </header>
     <div class="block-1">
         <div class="container">
-            <h2>Наши услуги</h2>
-            <ul>
-                <li>
-                    <h5> Аренда автобусов и микроавтобусов с водителем</h5>
-                    <p>Мы предоставляем автобусы и микроавтобусы вместе с опытным водителем.</p>
-                </li>
-                <li>
-                    <h5>Организация поездок и доставок</h5>
-                    <p>Осуществляем логистику деловых встреч и поездок. Доставку сотрудников на работу или корпоратив. Поможем привезти гостей на свадьбу или встретить в аэропорту.</p>
-                </li>
-                <li>
-                    <h5>Организация межрегиональных и международных перевозок</h5>
-                    <p>Организуем пассажирские перевозке по Беларуси, СНГ и ЕС.</p>
-                </li>
-            </ul>
+            <h2 class="center-align">Наши услуги</h2>
+            <div class="row align-center">
+                <div class="col s2"></div>
+                <div class="col s8">
+                    <ul>
+                        <li>
+                            <h5> Аренда автобусов и микроавтобусов с водителем</h5>
+                            <p>Мы предоставляем автобусы и микроавтобусы вместе с опытным водителем.</p>
+                        </li>
+                        <li>
+                            <h5>Организация поездок и доставок</h5>
+                            <p>Осуществляем логистику деловых встреч и поездок. Доставку сотрудников на работу или
+                                корпоратив.
+                                Поможем привезти гостей на свадьбу или встретить в аэропорту.</p>
+                        </li>
+                        <li>
+                            <h5>Организация межрегиональных и международных перевозок</h5>
+                            <p>Организуем пассажирские перевозке по Беларуси, СНГ и ЕС.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
 
 
     </div>
+
     <div class="block-2 image-block">
 
     </div>
+
+
+
     <div class="block-3">
         <div class="container">
             <h2>О компании</h2>
-            <p>Мы – компания профессионалов с 15-ти летним стажем. Занимаемся пассажирскими перевозками по Беларуси, СНГ и ЕС. Мы работаем каждый день для того, чтобы ваши путешествия проходили легко и безопасно.</p>
+            <p>Мы – компания профессионалов с 15-ти летним стажем. Занимаемся пассажирскими перевозками по Беларуси, СНГ
+                и ЕС. Мы работаем каждый день для того, чтобы ваши путешествия проходили легко и безопасно.</p>
         </div>
     </div>
     <div class="block-4 image-block"></div>
@@ -69,64 +96,83 @@
             <div class="row">
                 <div class="input-field col s5">
                     <select id="select-auto">
-                        <option value="Multivan" selected> Микроавтобус Volkswagen Multivan</option>
-                        <option value="Crafter">Микроавтобус Volksvagen Crafter</option>
-                        <option value="LT">Микроавтобус Volksvagen LT</option>
-                        <option value="Volvo">Автобус Volvo</option>
-                        <option value="Neoplan">Автобус Neoplan</option>
+                        <option value="multivan" selected> Микроавтобус Volkswagen Multivan</option>
+                        <option value="crafter">Микроавтобус Volksvagen Crafter</option>
+                        <option value="lt">Микроавтобус Volksvagen LT</option>
+                        <option value="volvo">Автобус Volvo</option>
+                        <option value="neoplan">Автобус Neoplan</option>
                     </select>
                     <label>Materialize Select</label>
                 </div>
-                <div class="col s6 m7">
+                <div class="col s6 m7 card-auto" id="card-multivan">
                     <div class="card">
                         <div class="card-image">
                             <img src="img/ФВ 8 1 вид справа.jpg">
                             <span class="card-title">Volkswagen Multivan</span>
                         </div>
                         <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am
+                                convenient because I require little markup to use effectively.</p>
                         </div>
                         <div class="card-action">
                             <a href="#">This is a link</a>
                         </div>
                     </div>
                 </div>
-                <div class="col s2 m7">
+                <div class="col s6 m7 hide card-auto" id="card-crafter">
                     <div class="card">
                         <div class="card-image">
                             <img src="img/ФВ 15 1 и 21 1.png">
                             <span class="card-title">Volkswagen Crafter</span>
                         </div>
                         <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am
+                                convenient because I require little markup to use effectively.</p>
                         </div>
                         <div class="card-action">
                             <a href="#">This is a link</a>
                         </div>
                     </div>
                 </div>
-                <div class="col s2 m7">
+                <div class="col s6 m7 hide card-auto" id="card-lt">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/ФВ 15 1 и 21 1.png">
+                            <span class="card-title">Volkswagen LT</span>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information. I am
+                                convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s6 m7 hide card-auto" id="card-volvo">
                     <div class="card">
                         <div class="card-image">
                             <img src="img/изображение_viber_2020-04-06_21-47-03.jpg">
                             <span class="card-title">Volvo</span>
                         </div>
                         <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am
+                                convenient because I require little markup to use effectively.</p>
                         </div>
                         <div class="card-action">
                             <a href="#">This is a link</a>
                         </div>
                     </div>
                 </div>
-                <div class="col s6 m7">
+                <div class="col s6 m7 hide card-auto" id="card-neoplan">
                     <div class="card">
                         <div class="card-image">
                             <img src="img/изображение_viber_2020-04-06_21-48-24.jpg">
                             <span class="card-title">Neoplan</span>
                         </div>
                         <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                            <p>I am a very simple card. I am good at containing small bits of information. I am
+                                convenient because I require little markup to use effectively.</p>
                         </div>
                         <div class="card-action">
                             <a href="#">This is a link</a>
@@ -134,12 +180,65 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <footer class="page-footer grey darken-4">
+        <div class="container">
+            <div class="row">
+
+            </div>
+
+
+
+
+            <div class="row">
+                <div class="col s12">
+                    <h5 class="white-text">Оставить заявку</h5>
+                    <p class="grey-text text-lighten-4">Оставьте заявку и наш менеджер перезвонит вам</p>
+                </div>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="name" type="text" class="validate">
+                            <label for="name">Ваше имя*</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="phone" type="text" class="validate">
+                            <label for="phone">Ваш телефон*</label>
+                        </div>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="text" type="text" class="validate">
+                        <label for="text">Текст</label>
+                    </div>
+                </form>
+                <button class="btn waves-effect waves-light amber darken-3 disabled right" id="submit-btn">Отправить
+                    заявку
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+
+        </div>
+        <div class="footer-copyright grey darken-4">
+
+            <div class=""></div>
+            <div class="">
+                <span>ИП Жилинский О.В.</span>
+                <span>УНП № 591238592</span>
+            </div>
+
+            <div class=""></div>
+            <div class="">
+                <span>Телефон:</span>
+                <span><a href="tel:+375 29 786 77 82">+375(29) 786 77 82</a></span>
+                <span>Email:</span>
+                <span><a href="email:mail@jilinsky.com">mail@jilinsky.com</a></span>
+            </div>
 
 
         </div>
 
-    </div>
-
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="script.js"></script>
