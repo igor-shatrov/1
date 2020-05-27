@@ -11,8 +11,7 @@ document.querySelectorAll('.footer-href').forEach(elem => { elem.addEventListene
 //Инициализация select Materialize
 document.addEventListener("DOMContentLoaded", function() {
     var elems = document.querySelectorAll("select");
-    let options = {};
-    var instances = M.FormSelect.init(elems, options);
+    var instances = M.FormSelect.init(elems, {});
 });
 
 
@@ -39,7 +38,6 @@ document.querySelector("#submit-btn").onclick = () => {
     document.querySelector("#name").value = '';
     document.querySelector("#phone").value = '';
     document.querySelector("#text").value = '';
-    console.log(name, phone, text);
     document.querySelector('#submit-btn').classList.add('disabled');
     sendRequest('POST', 'send.php', { name: name, phone: phone, text: text })
         .then(response => {
@@ -57,9 +55,6 @@ document.querySelectorAll('.input-field input').forEach(elem => {
 })
 
 function checkFormData() {
-    console.log(document.querySelector("#name").value);
-    console.log(document.querySelector("#phone").value.length);
-
     if (document.querySelector("#name").value != "" && document.querySelector("#phone").value.length >= 13) {
         document.querySelector('#submit-btn').classList.remove('disabled');
     }
