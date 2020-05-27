@@ -6,7 +6,7 @@ function handleButtonClick(className) {
 document.querySelectorAll('.blk-1-href').forEach(elem => { elem.addEventListener('click', () => { handleButtonClick('block-1') }) });
 document.querySelectorAll('.blk-3-href').forEach(elem => { elem.addEventListener('click', () => { handleButtonClick('block-3') }) });
 document.querySelectorAll('.blk-5-href').forEach(elem => { elem.addEventListener('click', () => { handleButtonClick('block-5') }) });
-document.querySelectorAll('.footer-href').forEach(elem => { elem.addEventListener('click', () => { handleButtonClick('page-footer') }) });
+document.querySelectorAll('.footer-href').forEach(elem => { elem.addEventListener('click', () => { handleButtonClick('address') }) });
 
 //Инициализация select Materialize
 document.addEventListener("DOMContentLoaded", function() {
