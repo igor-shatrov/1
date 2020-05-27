@@ -9,7 +9,7 @@ document.querySelectorAll('.blk-5-href').forEach(elem => { elem.addEventListener
 document.querySelectorAll('.footer-href').forEach(elem => { elem.addEventListener('click', () => { handleButtonClick('page-footer') }) });
 
 //Инициализация select Materialize
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     var elems = document.querySelectorAll("select");
     let options = {};
     var instances = M.FormSelect.init(elems, options);
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //При выборе автомобиля появляется нужная карточка
-document.querySelector('#select-auto').onchange = function () {
+document.querySelector('#select-auto').onchange = function() {
     document.querySelectorAll('.card-auto').forEach(elem => {
         elem.classList.add('hide');
     })
@@ -25,7 +25,7 @@ document.querySelector('#select-auto').onchange = function () {
 }
 
 //Адаптивное меню
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(elems, {});
 });
@@ -40,10 +40,18 @@ document.querySelector("#submit-btn").onclick = () => {
     document.querySelector("#phone").value = '';
     document.querySelector("#text").value = '';
     console.log(name, phone, text);
-    M.toast({ html: 'Спасибо за заявку! Наш менеджер перезвонит вам в ближайшее время' });
     document.querySelector('#submit-btn').classList.add('disabled');
+    sendRequest('POST', 'send.php', { name: name, phone: phone, text: text })
+        .then(response => {
+            if (response === 'error') {
+                M.toast({ html: 'Что-то пошло не так :( Пожалуйста, позвоните нам по телефону' })
+            } else if (response == 'success') {
+                M.toast({ html: 'Спасибо за заявку! Наш менеджер перезвонит вам в ближайшее время' });
+            }
+        })
 }
 
+//Проверка формы на валидность
 document.querySelectorAll('.input-field input').forEach(elem => {
     elem.addEventListener('input', checkFormData);
 })
@@ -52,7 +60,21 @@ function checkFormData() {
     console.log(document.querySelector("#name").value);
     console.log(document.querySelector("#phone").value.length);
 
-    if (document.querySelector("#name").value != "" && document.querySelector("#phone").value.length === 13) {
+    if (document.querySelector("#name").value != "" && document.querySelector("#phone").value.length >= 13) {
         document.querySelector('#submit-btn').classList.remove('disabled');
     }
+}
+
+function sendRequest(method, url, body = null) {
+    return fetch(url, {
+        method: method,
+        body: JSON.stringify(body),
+        headers: { 'Content-Type': 'application/json' }
+    }).then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            return 'error';
+        }
+    })
 }
