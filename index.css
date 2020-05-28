@@ -150,9 +150,10 @@
     input[type=text]:not(.browser-default):focus:not([readonly])+label {
         color: #ffb62e;
     }
-    /* .checkmark-icon-wrapper {
-        display: table;
-    } */
+    
+    textarea.materialize-textarea:focus:not([readonly])+label {
+        color: #ffb62e;
+    }
     
     .checkmark-icon {
         margin-top: 30px;
@@ -168,6 +169,10 @@
     
     .pt-50 {
         padding-top: 50px;
+    }
+    
+    .pt-100 {
+        padding-top: 100px;
     }
     
     .pb-150 {
@@ -200,13 +205,13 @@
             font-size: 48px;
         }
         .pt-150 {
-            padding-top: 50px;
+            padding-top: 25px;
         }
         .pt-50 {
             padding-top: 25px;
         }
         .pb-150 {
-            padding-bottom: 50px;
+            padding-bottom: 25px;
         }
         .pb-50 {
             padding-bottom: 25px;
